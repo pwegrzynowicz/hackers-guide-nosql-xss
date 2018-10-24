@@ -1,0 +1,12 @@
+<table class="table">
+    <tbody>
+    <% for (var i = 0; i < privateComments.length; i++) {%>
+    <tr>
+        <td>
+            <%= privateComments[i].created.toUTCString()%><br/>
+            <%= privateComments[i].content %>
+        </td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>

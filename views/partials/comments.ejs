@@ -1,0 +1,30 @@
+<p>
+<form class="form-inline" action="<%=path%>" method="get">
+    <div class="form-group">
+        <label class="sr-only" for="author">Author:</label>
+        <input type="text" class="form-control" id="author" placeholder="Filter by author" name="author" size="50"
+               value="<%-author%>"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Author</th>
+        <th>Comment</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% for (var i = 0; i < comments.length; i++) {
+    var dt = comments[i].created; %>
+    <tr>
+        <td>
+            <%= comments[i].authorName %><br/>
+            <%=dt.toUTCString()%>
+        </td>
+        <td><%- comments[i].content %></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>

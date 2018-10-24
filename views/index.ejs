@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head %>
+</head>
+<body class="text-center">
+<div class="container-fluid">
+    <h1>CodeOne 2018 XSS Demo</h1>
+    <div class="row">
+        <div class="col-sm-8" style="background-color:lightgrey;">
+            <h2>Public comments on CodeOne sessions:</h2>
+            <% include partials/comments %>
+        </div>
+        <div class="col-sm-4" style="background-color:lightblue;">
+            <h2>Login / Register</h2>
+            If you want to add your own comment on Code One sessions, please <a href="/login-register">login or
+            register</a>.
+        </div>
+    </div>
+</div>
+</body>
+<% include partials/script %>
+</html>
