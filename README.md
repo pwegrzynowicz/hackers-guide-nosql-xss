@@ -1,5 +1,5 @@
-CodeOne Comments Vulnerability Demo 
-===================================
+The Hacker's Guide to XSS and NoSQL injection 
+=============================================
 
 It is a demo application to showcase XSS and NoSQL injection vulnerabilities.
 
