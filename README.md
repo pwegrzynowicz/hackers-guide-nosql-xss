@@ -1,5 +1,5 @@
-CodeOne Comments Vulnerability Demo 
-===================================
+Hacker's Guide XSS and NoSQL Vulnerability Demo 
+===============================================
 
 It is a demo application to showcase XSS and NoSQL injection vulnerabilities.
 
@@ -19,5 +19,6 @@ Run demo
 
   * npm install
   * nodemon start
+  
   
 
