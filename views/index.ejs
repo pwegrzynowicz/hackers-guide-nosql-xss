@@ -3,17 +3,22 @@
 <head>
     <% include partials/head %>
 </head>
-<body class="text-center">
+<body>
+<div class="jumbotron text-center">
+    <h1>The Hacker's Guide to XSS Demo</h1>
+    <h5>Powered by <a href="https://www.oracle.com/cloud" target="_blank">Oracle Cloud</a></h5>
+</div>
 <div class="container-fluid">
-    <h1>CodeOne 2018 XSS Demo</h1>
     <div class="row">
-        <div class="col-sm-8" style="background-color:lightgrey;">
-            <h2>Public comments on CodeOne sessions:</h2>
+        <div class="col-sm-8">
+            <h3 class="text-primary">Public comments</h3>
+            <hr/>
             <% include partials/comments %>
         </div>
-        <div class="col-sm-4" style="background-color:lightblue;">
-            <h2>Login / Register</h2>
-            If you want to add your own comment on Code One sessions, please <a href="/login-register">login or
+        <div class="col-sm-4">
+            <h3 class="text-success">Login/Register</h3>
+            <hr/>
+            If you want to add your own comment on this sessions, please <a class="text-success" href="/login-register">login or
             register</a>.
         </div>
     </div>

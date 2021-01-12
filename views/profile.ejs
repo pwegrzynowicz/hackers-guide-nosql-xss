@@ -3,34 +3,40 @@
 <head>
     <% include partials/head %>
 </head>
-<body class="text-center">
+<body>
+<div class="jumbotron text-center">
+    <h1>The Hacker's Guide to XSS Demo</h1>
+    <h5>Powered by <a href="https://www.oracle.com/cloud" target="_blank">Oracle Cloud</a></h5>
+</div>
 <div class="container-fluid">
-    <h1>CodeOne 2018 XSS Demo</h1>
     <div class="row">
         <div class="col-sm-8">
-            <h4>Add new comment on CodeOne and my session:</h4>
+            <h2 class="text-primary">New Comment</h2>
+            <hr/>
             <p>
             <form class="form-inline" action="/users/comment" method="post">
+
                 <div class="form-group">
                     <label class="sr-only" for="comment">Comment:</label>
-                    <input type="text" class="form-control" id="comment" placeholder="Comment" name="comment"
+                    <input type="text" class="form-control" id="comment" placeholder="Add a new comment" name="comment"
                            required="" size="50"/>
                 </div>
-                <div class="checkbox">
+                <div class="mx-2 checkbox">
                     <label><input type="checkbox" class="form-control" name="pub" value="pub" checked>Public</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Add comment</button>
             </form>
             </p>
-            <h4>Public comments:</h4>
+            <h2 class="text-primary">Public comments</h2>
+            <hr/>
             <% include partials/comments %>
         </div>
-        <div class="col-sm-4" style="background-color:lightblue;">
-            <h4>Hello, <%= user.username %>!</h4>
+        <div class="col-sm-4">
+            <h2>Hello, <b class="text-success"><%= user.username %></b>!</h2>
             <hr/>
-            <a type="button" href="/users/logout">Logout</a>
+            <a class="text-danger" type="button" href="/users/logout">Logout</a>
             <hr/>
-            <h4>Private comments</h4>
+            <h6 class="text-success">My private comments</h6>
             <% include partials/private-comments %>
         </div>
     </div>

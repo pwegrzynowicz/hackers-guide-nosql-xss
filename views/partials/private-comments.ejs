@@ -3,7 +3,8 @@
     <% for (var i = 0; i < privateComments.length; i++) {%>
     <tr>
         <td>
-            <%= privateComments[i].created.toUTCString()%><br/>
+            <small class="text-muted>
+            <%= privateComments[i].created.toUTCString()%></small><br/>
             <%= privateComments[i].content %>
         </td>
     </tr>

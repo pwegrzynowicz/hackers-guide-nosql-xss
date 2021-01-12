@@ -3,25 +3,30 @@
 <head>
     <% include partials/head %>
 </head>
-<body class="text-center">
+<body>
+<div class="jumbotron text-center">
+    <h1>The Hacker's Guide to XSS Demo</h1>
+    <h5>Powered by <a href="https://www.oracle.com/cloud" target="_blank">Oracle Cloud</a></h5>
+</div>
 <div class="container-fluid">
-    <h1>CodeOne 2018 XSS Demo</h1>
-    <div class="row">
-        <div class="col-sm-6" style="background-color:lightgrey;">
-            <h2>Login</h2>
+    <div class="row text-center">
+        <div class="col-sm-6">
+            <h3 class="text-primary">Login</h3>
+            <hr/>
             <form action="/login" method="post">
-                <p><input type="text" name="logusername" placeholder="Username" required=""></p>
-                <p><input type="password" name="logpassword" placeholder="Password" required=""></p>
-                <p><input type="submit" value="Login" class="btn btn-primary"></p>
+                <p><input class="p-1" type="text" name="logusername" placeholder="Username" required=""></p>
+                <p><input class="p-1" type="password" name="logpassword" placeholder="Password" required=""></p>
+                <p><input type="submit" value="Login" class="px-3 btn btn-primary"></p>
             </form>
         </div>
-        <div class="col-sm-6" style="background-color:lightblue;">
-            <h2>Register</h2>
+        <div class="col-sm-6 text-center">
+            <h3 class="text-success">Register</h3>
+            <hr/>
             <form action="/register" method="post">
-                <p><input type="text" name="username" placeholder="Username" required=""></p>
-                <p><input type="password" name="password" placeholder="Password" required=""></p>
-                <p><input type="password" name="passwordConf" placeholder="Confirm Password" required=""></p>
-                <p><input type="submit" class="btn btn-primary" value="Register" class="btn btn-primary"></p>
+                <p><input class="p-1" type="text" name="username" placeholder="Username" required=""></p>
+                <p><input class="p-1" type="password" name="password" placeholder="Password" required=""></p>
+                <p><input class="p-1" type="password" name="passwordConf" placeholder="Confirm Password" required=""></p>
+                <p><input type="submit" class="px-3 btn btn-success" value="Register"></p>
             </form>
         </div>
     </div>
